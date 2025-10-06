@@ -1,0 +1,58 @@
+﻿<Window x:Class="TrackerUI.TournamentDashboardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Tournament Dashboard" Height="360" Width="520"
+        FontFamily="Segoe UI">
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="16"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock 
+            x:Name="headerLabel"
+            Grid.Row="0"
+            Text="Tournament Dashboard"
+            Foreground="DodgerBlue" 
+            FontSize="30"
+            HorizontalAlignment="Center"
+            Margin="0,0,0,12"/>
+
+        <TextBlock 
+            x:Name="loadExistingTournamentLabel"
+            Grid.Row="1"
+            Text="Load Existing Tournament"
+            Foreground="DodgerBlue"
+            FontSize="18"
+            HorizontalAlignment="Center"
+            Margin="0,0,0,8"/>
+
+        <ComboBox 
+            x:Name="existingTournamentsDropDown"
+            Grid.Row="2"
+            Width="320"
+            Height="30"
+            HorizontalAlignment="Center"
+            Margin="0,0,0,12"/>
+
+        <Button
+            x:Name="loadTournamentButton"
+            Grid.Row="3"
+            Content="Load Tournament"
+            Width="170" Height="38"
+            HorizontalAlignment="Center"
+            Margin="0,0,0,0"/>
+
+        <Button 
+            x:Name="createTournamentButton"
+            Grid.Row="5"
+            Content="Create Tournament"
+            Width="200" Height="50"
+            HorizontalAlignment="Center"/>
+    </Grid>
+</Window>

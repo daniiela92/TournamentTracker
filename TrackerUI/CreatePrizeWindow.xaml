@@ -1,0 +1,128 @@
+﻿<Window x:Class="TrackerUI.CreatePrizeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Create Prize" Height="520" Width="620" FontFamily="Segoe UI">
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+       </Grid.ColumnDefinitions>
+
+        <TextBlock 
+            x:Name="headerLabel"
+            Grid.Row="0" 
+            Grid.ColumnSpan="2"
+            Text="Create Prize"
+            Foreground="DodgerBlue"
+            FontSize="32"
+            Margin="0,0,0,24"/>
+
+        <TextBlock 
+            x:Name="placeNumberLabel"
+            Grid.Row="1" 
+            Grid.Column="0"
+            Text="Place Number" 
+            Foreground="DodgerBlue" 
+            FontSize="22"
+            Margin="0,0,16,12"
+            VerticalAlignment="Center"/>
+        
+        <TextBox
+            x:Name="placeNumberValue"
+            Grid.Row="1"
+            Grid.Column="1"
+            Height="28"
+            Width="260"
+            Margin="0,0,0,12"/>
+
+        <TextBlock 
+            x:Name="placeNameLabel"
+            Grid.Row="2" 
+            Grid.Column="0"
+            Text="Place Name"
+            Foreground="DodgerBlue" 
+            FontSize="22"
+            Margin="0,0,16,12"
+            VerticalAlignment="Center"/>
+        
+        <TextBox  
+            x:Name="placeNameValue"
+            Grid.Row="2"
+            Grid.Column="1"
+            Height="28" 
+            Width="260"
+            Margin="0,0,0,12"/>
+
+        <TextBlock
+            x:Name="prizeAmountLabel"
+            Grid.Row="3"
+            Grid.Column="0"
+            Text="Prize Amount" 
+            Foreground="DodgerBlue"
+            FontSize="22"
+            Margin="0,0,16,12" 
+            VerticalAlignment="Center"/>
+        
+        <TextBox   
+            x:Name="prizeAmountValue"
+            Grid.Row="3" 
+            Grid.Column="1"
+            Height="28" 
+            Width="260" 
+            Margin="0,0,0,12"/>
+
+        <TextBlock 
+            x:Name="orLabel"
+            Grid.Row="4"
+            Grid.Column="0" 
+            Grid.ColumnSpan="2"
+            Text="-or-" 
+            Foreground="#7AA7D9" 
+            FontSize="18"
+            HorizontalAlignment="Center"
+            Margin="0,8,0,16"/>
+
+        <TextBlock 
+            x:Name="prizePercentageLabel"
+            Grid.Row="5" 
+            Grid.Column="0"
+            Text="Prize Percentage"
+            Foreground="DodgerBlue" 
+            FontSize="22"
+            Margin="0,0,16,12" 
+            VerticalAlignment="Center"/>
+        
+        <TextBox
+            x:Name="prizePercentageValue"
+            Grid.Row="5" 
+            Grid.Column="1"
+            Height="28" 
+            Width="260" 
+            Margin="0,0,0,12"/>
+
+        <Button
+            x:Name="createPrizeButton"
+            Grid.Row="6" 
+            Grid.Column="0" 
+            Grid.ColumnSpan="2"
+            Content="Create Prize"
+            Foreground="DodgerBlue"
+            FontSize="18"
+            Width="200" Height="50"
+            Margin="0,20,0,0"
+            HorizontalAlignment="Center"/>
+    </Grid>
+</Window>
+
+

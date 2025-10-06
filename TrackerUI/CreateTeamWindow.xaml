@@ -1,0 +1,197 @@
+﻿<Window x:Class="TrackerUI.CreateTeamWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Create Team" Height="670" Width="900"
+        FontFamily="Segoe UI">
+    <Grid Margin="20">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock 
+            x:Name="headerLabel"
+            Grid.Row="0" 
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Text="Create Team"
+            Foreground="DodgerBlue"
+            FontSize="32"
+            Margin="0,0,0,24"/>
+
+        <TextBlock 
+            
+            Grid.Row="1" 
+            Grid.Column="0"
+            Text="Team Name"
+            Foreground="DodgerBlue" 
+            FontSize="20"
+            Margin="0,0,0,6"/>
+        <TextBox 
+            Grid.Row="1" 
+            Grid.Column="0"
+            Margin="0,28,60,16"
+            Height="30"/>
+
+        <TextBlock 
+            Grid.Row="2"
+            Grid.Column="0"
+            Text="Select Team Member"
+            Foreground="DodgerBlue"
+            FontSize="20"
+            Margin="0,0,0,6"/>
+        <ComboBox 
+            Grid.Row="2" 
+            Grid.Column="0"
+            Margin="0,28,60,16"
+            Height="30"/>
+
+        <Button
+            Grid.Row="3" 
+            Grid.Column="0"
+            Content="Add Member"
+            Width="170" Height="36"
+            Margin="0,8,0,24"
+            HorizontalAlignment="Left"/>
+
+        <GroupBox 
+            x:Name="addNewMemberGroupBox"
+            Grid.Row="4" 
+            Grid.Column="0"
+            Header="Add New Member"
+            BorderBrush="#FFC8D6E5" 
+            BorderThickness="1"
+            Foreground="DodgerBlue"
+            FontSize="20"
+            Padding="16" 
+            Margin="0,0,60,0">
+            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock 
+                    Grid.Row="0" 
+                    Grid.Column="0" 
+                    Text="First Name"
+                    Foreground="DodgerBlue" 
+                    FontSize="18"
+                    Margin="0,0,12,8" 
+                    VerticalAlignment="Center"/>
+                
+                <TextBox   
+                    Grid.Row="0" 
+                    Grid.Column="1"
+                    Height="28"
+                    Margin="0,0,0,8"/>
+
+                <TextBlock 
+                    Grid.Row="1" 
+                    Grid.Column="0"
+                    Text="Last Name"
+                    Foreground="DodgerBlue" 
+                    FontSize="18"
+                    Margin="0,0,12,8" 
+                    VerticalAlignment="Center"/>
+                
+                <TextBox  
+                    Grid.Row="1" 
+                    Grid.Column="1" 
+                    Height="28" 
+                    Margin="0,0,0,8"/>
+
+                <TextBlock 
+                    Grid.Row="2" 
+                    Grid.Column="0" 
+                    Text="Email"
+                    Foreground="DodgerBlue" 
+                    FontSize="18"
+                   Margin="0,0,12,8" 
+                    VerticalAlignment="Center"/>
+                
+                <TextBox  
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Height="28"
+                    Margin="0,0,0,8"/>
+
+                <TextBlock 
+                    Grid.Row="3"
+                    Grid.Column="0" 
+                    Text="Cellphone"
+                    Foreground="DodgerBlue" 
+                    FontSize="18"
+                    Margin="0,0,12,12" 
+                    VerticalAlignment="Center"/>
+                
+                <TextBox  
+                    Grid.Row="3" 
+                    Grid.Column="1"
+                    Height="28"
+                    Margin="0,0,0,12"/>
+
+                <Button
+                    Grid.Row="4" 
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Content="Create Member"
+                    Width="170" 
+                    Height="36"
+                    HorizontalAlignment="Left" 
+                    Margin="0,8,0,0"/>
+            </Grid>
+        </GroupBox>
+
+        <ListBox 
+            x:Name="teamMembersListBox"
+            Grid.Row="1" 
+            Grid.RowSpan="5" 
+            Grid.Column="1"
+            Margin="0,28,16,0"
+            MinHeight="360"/>
+
+
+        <Button 
+            Grid.Row="1" 
+            Grid.RowSpan="2"
+            Grid.Column="2"
+            Content="Delete Selected"  
+            Width="130" Height="90"
+            Margin="8,28,0,0" 
+            HorizontalAlignment="Left"/>
+
+            
+            <Button 
+                Grid.Row="7" 
+                Grid.Column="0" 
+                Grid.ColumnSpan="3"
+                Content="Create Team"
+                Width="240" 
+                Height="48"
+                HorizontalAlignment="Center"
+                Margin="0,8,0,0"/>
+    </Grid>
+</Window>
+
