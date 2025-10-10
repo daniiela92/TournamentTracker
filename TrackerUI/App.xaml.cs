@@ -1,6 +1,9 @@
-﻿using System.Configuration;
+﻿using Microsoft.Extensions.Configuration;
+using System.Configuration;
 using System.Data;
+using System.IO;
 using System.Windows;
+using TrackerLibrary;
 
 namespace TrackerUI
 {
@@ -14,9 +17,16 @@ namespace TrackerUI
         {
             base.OnStartup(e);
 
+            // Lê a appsettings.json, para conseguir obter os dados de ligação (connection string) à base de dados
+
+           // var cfg = new ConfigurationBuilder()
+           //.SetBasePath(Directory.GetCurrentDirectory())
+           //.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true).Build();
+
+
             // Initialize the database connections
 
-             TrackerLibrary.GlobalConfig.InitializeConnections(true, true);
+            TrackerLibrary.GlobalConfig.InitializeConnections(TrackerLibrary.DataBaseType.Sql);
 
             var mainWindow = new CreatePrizeWindow();
             // var mainWindow = new TournamentDashboardWindow();

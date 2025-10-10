@@ -1,5 +1,7 @@
 ﻿using System.Windows;
 using TrackerLibrary;
+using TrackerLibrary.DataAccess;
+using TrackerLibrary.Models;
 
 namespace TrackerUI
 {
@@ -24,10 +26,10 @@ namespace TrackerUI
                     prizeAmountValue.Text,
                     prizePercentageValue.Text);
 
-                foreach (IDataConnection db in GlobalConfig.Connections)
-                {
-                    db.CreatePrize(model);
-                }
+                
+                    GlobalConfig.Connection.CreatePrize(model); // Chama o método CreatePrize da interface
+                                                                // IDataConnection que está implementada na classe SqlConnector
+
 
                 placeNameValue.Text = "";
                 placeNumberValue.Text = "";
