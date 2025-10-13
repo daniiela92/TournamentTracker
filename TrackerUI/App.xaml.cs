@@ -28,7 +28,7 @@ namespace TrackerUI
 
             TrackerLibrary.GlobalConfig.InitializeConnections(DataBaseType.TextFile);
 
-            var mainWindow = new CreatePrizeWindow();
+            var mainWindow = new CreateTeamWindow();
             // var mainWindow = new TournamentDashboardWindow();
             mainWindow.Show();
         }

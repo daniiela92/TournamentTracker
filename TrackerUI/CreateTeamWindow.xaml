@@ -93,6 +93,7 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBlock 
+                    
                     Grid.Row="0" 
                     Grid.Column="0" 
                     Text="First Name"
@@ -101,11 +102,12 @@
                     Margin="0,0,12,8" 
                     VerticalAlignment="Center"/>
                 
-                <TextBox   
+                <TextBox 
+                    x:Name="firstNameValue"
                     Grid.Row="0" 
                     Grid.Column="1"
                     Height="28"
-                    Margin="0,0,0,8"/>
+                    Margin="0,0,0,8" />
 
                 <TextBlock 
                     Grid.Row="1" 
@@ -117,6 +119,7 @@
                     VerticalAlignment="Center"/>
                 
                 <TextBox  
+                    x:Name="lastNameValue"
                     Grid.Row="1" 
                     Grid.Column="1" 
                     Height="28" 
@@ -132,6 +135,7 @@
                     VerticalAlignment="Center"/>
                 
                 <TextBox  
+                    x:Name="emailValue"
                     Grid.Row="2"
                     Grid.Column="1"
                     Height="28"
@@ -147,12 +151,14 @@
                     VerticalAlignment="Center"/>
                 
                 <TextBox  
+                    x:Name="cellphoneValue"
                     Grid.Row="3" 
                     Grid.Column="1"
                     Height="28"
                     Margin="0,0,0,12"/>
 
                 <Button
+                    x:Name="createMemberButton"
                     Grid.Row="4" 
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
@@ -160,7 +166,8 @@
                     Width="170" 
                     Height="36"
                     HorizontalAlignment="Left" 
-                    Margin="0,8,0,0"/>
+                    Margin="0,8,0,0"
+                    Click="createMemberButton_Click"/>
             </Grid>
         </GroupBox>
 
