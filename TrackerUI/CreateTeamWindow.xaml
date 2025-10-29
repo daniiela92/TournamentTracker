@@ -54,18 +54,21 @@
             FontSize="20"
             Margin="0,0,0,6"/>
         <ComboBox 
+            x:Name="selectTeamMemberDropDown"
             Grid.Row="2" 
             Grid.Column="0"
             Margin="0,28,60,16"
             Height="30"/>
 
         <Button
+            x:Name = "addMemberButton"
             Grid.Row="3" 
             Grid.Column="0"
             Content="Add Member"
             Width="170" Height="36"
             Margin="0,8,0,24"
-            HorizontalAlignment="Left"/>
+            HorizontalAlignment="Left"
+            Click="addMemberButton_Click"/>
 
         <GroupBox 
             x:Name="addNewMemberGroupBox"
@@ -181,13 +184,15 @@
 
 
         <Button 
+            x:Name="removeSelectedMemberButton"
             Grid.Row="1" 
             Grid.RowSpan="2"
             Grid.Column="2"
-            Content="Delete Selected"  
+            Content="Remove Selected"  
             Width="130" Height="90"
             Margin="8,28,0,0" 
-            HorizontalAlignment="Left"/>
+            HorizontalAlignment="Left"
+            Click="removeSelectedMemberButton_Click"/>
 
             
             <Button 

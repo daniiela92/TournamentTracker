@@ -61,5 +61,12 @@ namespace TrackerLibrary.DataAccess
 
             return model; // Return the model with the new ID
         }
+
+        public List<PersonModel> GetPerson_All()
+        {
+            return PeopleFile.FullFilePath().LoadFile().ConvertToPersonModels();
+
+            //implementação do método para ler os dados do ficheiro de texto e converter para List<PersonModel>
+        }
     }
 }
